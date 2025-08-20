@@ -120,19 +120,33 @@ namespace MyApp
             //}
             #endregion
             #region example02
-            Employee E1 = new Employee(10, "Ali", 1000);
-            Employee E2 = new Employee(20, "Sara", 2000);
-            Employee E3 = new Employee(30, "Adam", 3000);
-            SortedDictionary<Employee, string> sortedEps = new SortedDictionary<Employee, string>() {
-                [E1] = "1st",
-                [E2] = "2nd",
-                [E3] = "3rd",
-            };
-            foreach (var e in sortedEps) { 
-                Console.WriteLine(e.ToString());
-            }
+            //Employee E1 = new Employee(10, "Ali", 1000);
+            //Employee E2 = new Employee(20, "Sara", 2000);
+            //Employee E3 = new Employee(30, "Adam", 3000);
+            //SortedDictionary<Employee, string> sortedEps = new SortedDictionary<Employee, string>() {
+            //    [E1] = "1st",
+            //    [E2] = "2nd",
+            //    [E3] = "3rd",
+            //};
+            //foreach (var e in sortedEps) { 
+            //    Console.WriteLine(e.ToString());
+            //}
 
             #endregion
+            #endregion
+            #region  Generic Collection Sorted List
+            //SortedList<string, int>PhoneNote = new SortedList<String, int>()
+            //{
+            //        { "Mona",123},
+            //        { "Ali", 456},
+            //        { "Sara", 789 }
+
+            //    };
+
+            //Console.WriteLine(PhoneNote.GetValueAtIndex(0));
+            //foreach (var phoneNote in PhoneNote) { 
+            //    Console.WriteLine(phoneNote);
+            //}
             #endregion
         }
     }
