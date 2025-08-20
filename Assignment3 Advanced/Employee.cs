@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment3_Advanced
 {
-    internal class Employee
+    internal class Employee: IComparable<Employee>
     {
     
         public int Id { get; set; }
@@ -33,6 +33,14 @@ namespace Assignment3_Advanced
         }
         public override int GetHashCode() { 
             return HashCode.Combine(Id, Name, Salary);
+        }
+
+        public int CompareTo(Employee? other)
+        {
+            if (other == null) {
+                return 1;
+            }
+             return Id.CompareTo(other.Id);
         }
     }
 }
