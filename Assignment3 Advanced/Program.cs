@@ -2,6 +2,7 @@
 using Assignment3_Advanced.HashSet;
 using Assignment3_Advanced.HashTable;
 using Assignment3_Advanced.SortedDictionary;
+using Assignment3_Advanced.SortedSet;
 using System;
 using System.Collections;
 using System.Linq;
@@ -176,20 +177,32 @@ namespace MyApp
             //    Console.WriteLine(item);
             //}
 
-            #endregion HashSet Methods
-            HashSet<int> set01 = new HashSet<int>() { 1, 2, 3, 4, 5 };
-            HashSet<int> set02 = new HashSet<int>() { 1, 2, 3, 4, 5,6,7,8,9,10 };
+            #region HashSet Methods
+            //HashSet<int> set01 = new HashSet<int>() { 1, 2, 3, 4, 5 };
+            //HashSet<int> set02 = new HashSet<int>() { 1, 2, 3, 4, 5,6,7,8,9,10 };
 
-            //set02.ExceptWith(set01);
-            //set02.IntersectWith(set01);
-            set02.SymmetricExceptWith(set01);
-            Console.WriteLine(set01.IsSubsetOf(set02));
-            foreach (int i in set02) {
-                Console.WriteLine(i);
-            }
+            ////set02.ExceptWith(set01);
+            ////set02.IntersectWith(set01);
+            //set02.SymmetricExceptWith(set01);
+            //Console.WriteLine(set01.IsSubsetOf(set02));
+            //foreach (int i in set02) {
+            //    Console.WriteLine(i);
+            //}
             #endregion
-            #region
+            #endregion
 
+            #endregion
+            #region Generic Sorted set
+            SortedSet<int> Numbers = new SortedSet<int>(new IntCompare());
+            Numbers.Add(4);
+            Numbers.Add(8);
+            Numbers.Add(2);
+            Numbers.Add(6);
+            Console.WriteLine(Numbers.Min());
+            Console.WriteLine(Numbers.Max());
+            //foreach (var i in Numbers) { 
+            //    Console.WriteLine(i);
+            //}
             #endregion
         }
     }
